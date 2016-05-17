@@ -34,7 +34,7 @@ return [
             'driver' => 'sync',
         ],
 
-        'database' => [
+        /*'database' => [
             'driver' => 'database',
             'table' => 'jobs',
             'queue' => 'default',
@@ -55,7 +55,7 @@ return [
             'prefix' => 'https://sqs.us-east-1.amazonaws.com/your-account-id',
             'queue' => 'your-queue-name',
             'region' => 'us-east-1',
-        ],
+        ],*/
 
         'redis' => [
             'driver' => 'redis',
@@ -78,7 +78,7 @@ return [
     */
 
     'failed' => [
-        'database' => env('DB_CONNECTION', 'mysql'),
+        'database' => env('DB_HYBRID', 'med_hybrid'),
         'table' => 'failed_jobs',
     ],
 

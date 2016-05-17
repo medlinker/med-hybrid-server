@@ -26,7 +26,7 @@ return [
     |
     */
 
-    'default' => env('DB_CONNECTION', 'mysql'),
+    'default' => env('DB_HYBRID', 'med_hybrid'),
 
     /*
     |--------------------------------------------------------------------------
@@ -45,39 +45,23 @@ return [
     */
 
     'connections' => [
-
-        'sqlite' => [
-            'driver' => 'sqlite',
-            'database' => env('DB_DATABASE', database_path('database.sqlite')),
-            'prefix' => '',
-        ],
-
-        'mysql' => [
+        env('DB_HYBRID', 'med_hybrid') => [
             'driver' => 'mysql',
-            'host' => env('DB_HOST', 'localhost'),
-            'port' => env('DB_PORT', '3306'),
-            'database' => env('DB_DATABASE', 'forge'),
-            'username' => env('DB_USERNAME', 'forge'),
-            'password' => env('DB_PASSWORD', ''),
-            'charset' => 'utf8',
-            'collation' => 'utf8_unicode_ci',
+            'read' => [
+                'host' => env('DB_HYBRID_READ_HOST', '115.29.229.73'),
+            ],
+            'write' => [
+                'host' => env('DB_HYBRID_WRITE_HOST', '115.29.229.73'),
+            ],
+            'database' => env('DB_HYBRID', 'med_hybrid'),
+            'username' => env('DB_HYBRID_USERNAME', 'meddev'),
+            'password' => env('DB_HYBRID_PASSWORD', 'akdjfkaj2399I'),
+            'charset' => 'utf8mb4',
+            'collation' => 'utf8mb4_unicode_ci',
             'prefix' => '',
             'strict' => false,
             'engine' => null,
         ],
-
-        'pgsql' => [
-            'driver' => 'pgsql',
-            'host' => env('DB_HOST', 'localhost'),
-            'port' => env('DB_PORT', '5432'),
-            'database' => env('DB_DATABASE', 'forge'),
-            'username' => env('DB_USERNAME', 'forge'),
-            'password' => env('DB_PASSWORD', ''),
-            'charset' => 'utf8',
-            'prefix' => '',
-            'schema' => 'public',
-        ],
-
     ],
 
     /*
@@ -109,9 +93,10 @@ return [
         'cluster' => false,
 
         'default' => [
-            'host' => env('REDIS_HOST', 'localhost'),
-            'password' => env('REDIS_PASSWORD', null),
+            'host' => env('REDIS_HOST', '127.0.0.1'),
             'port' => env('REDIS_PORT', 6379),
+            'password' => env('REDIS_PASSWORD', null),
+            'timeout' => 10,
             'database' => 0,
         ],
 
