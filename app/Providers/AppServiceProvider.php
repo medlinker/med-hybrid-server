@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Providers;
+namespace Medlinker\Hybrid\Providers;
 
 use Illuminate\Support\ServiceProvider;
 

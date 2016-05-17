@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Controllers\Auth;
+namespace Medlinker\Hybrid\Http\Controllers\Auth;
 
-use App\User;
+use Medlinker\Hybrid\User;
 use Validator;
-use App\Http\Controllers\Controller;
+use Medlinker\Hybrid\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 

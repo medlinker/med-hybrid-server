@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Events;
+namespace Medlinker\Hybrid\Events;
 
 abstract class Event
 {

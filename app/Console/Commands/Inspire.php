@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Console\Commands;
+namespace Medlinker\Hybrid\Console\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Foundation\Inspiring;

@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace Medlinker\Hybrid;
 
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
